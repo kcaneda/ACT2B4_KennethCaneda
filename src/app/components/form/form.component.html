@@ -1,0 +1,50 @@
+<form [formGroup]="formularioProducto" (ngSubmit)="onSubmit()">
+    <h1>Formulario de Producto: </h1>
+    <p>Ingrese los siguientes datos: </p>
+    <div>
+        <label for="nombre">Nombre: </label>
+        <input type="text" formControlName="nombre" placeholder="Ingrese su nombre" id="nombre">
+        <div *ngIf="formularioProducto.get('nombre')?.invalid && formularioProducto.get('nombre')?.touched">
+            <span *ngIf="formularioProducto.get('nombre')?.errors?.['required']">El nombre es obligatorio.</span>
+            <span *ngIf="formularioProducto.get('nombre')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres</span>
+            <span *ngIf="formularioProducto.get('nombre')?.errors?.['maxlength']">El nombre puede tener hasta un máximo de 45 caracteres</span>
+        </div>
+    </div>
+    <div>
+        <label for="descripcion">Descripcion: </label>
+        <textarea formControlName="descripcion" placeholder="Ingrese una descripción (mínimo 20 carácteres)" id="descripcion"></textarea>
+        <div *ngIf="formularioProducto.get('descripcion')?.invalid && formularioProducto.get('descripcion')?.touched">
+            <span *ngIf="formularioProducto.get('descripcion')?.errors?.['required']">La descripcion es obligatoria.</span>
+            <span *ngIf="formularioProducto.get('descripcion')?.errors?.['minlength']">La descripcion debe tener al menos 20 caracteres</span>
+            <span *ngIf="formularioProducto.get('descripcion')?.errors?.['maxlength']">La descripcion puede tener hasta un máximo de 120 caracteres</span>
+        </div>
+    </div>
+    <div>
+        <label for="precio">Precio: </label>
+        <input type="number" formControlName="precio" placeholder="0.00" id="precio">
+        <div *ngIf="formularioProducto.get('precio')?.invalid && formularioProducto.get('precio')?.touched">
+            <span *ngIf="formularioProducto.get('precio')?.errors?.['required']">El precio es obligatorio.</span>
+            <span *ngIf="formularioProducto.get('precio')?.errors?.['min']">El precio debe ser mayor a 0.01.</span>
+            <span *ngIf="formularioProducto.get('precio')?.errors?.['pattern']">El precio solo puede contener 2 decimales.</span>
+        </div>
+    </div>
+    <div>
+        <label for="stock">Stock: </label>
+        <input type="number" formControlName="stock" placeholder="Ingrese el stock del producto ingresado" id="stock">
+        <div *ngIf="formularioProducto.get('stock')?.invalid && formularioProducto.get('stock')?.touched">
+            <span *ngIf="formularioProducto.get('stock')?.errors?.['required']">El stock es obligatorio.</span>
+            <span *ngIf="formularioProducto.get('stock')?.errors?.['min']">El stock no puede ser menor a 0.</span>
+            <span *ngIf="formularioProducto.get('stock')?.errors?.['pattern']">El stock debe ser un número entero positivo.</span>
+        </div>
+    </div>
+    <div>
+        <label for="categoria">Categoria: </label>
+        <select formControlName="categoria" id="categoria">
+            <option value="ALIMENTOS">ALIMENTOS</option>
+            <option value="HOGAR">HOGAR</option>
+            <option value="ELECTRONICOS">ELECTRONICOS</option>
+            <option value="JUGUETES">JUGUETES</option>
+        </select>
+    </div>
+    <button type="submit">Registrar Producto</button>
+</form>

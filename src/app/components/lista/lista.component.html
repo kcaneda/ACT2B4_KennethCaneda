@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Categoria</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productos; let i = index">
+            <td>{{i +1}}</td>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.stock}}</td>
+            <td>{{producto.categoria}}</td>
+        </tr>
+        <tr *ngIf="!productos.length">
+            <td colspan="6">No hay productos disponibles.</td>
+        </tr>
+    </tbody>
+</table>
+<button [routerLink]="['/formulario-producto']">Volver al formulario</button>
