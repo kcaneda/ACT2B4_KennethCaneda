@@ -52,4 +52,8 @@ El envío ocurre en `onSubmit()`:
 
 La verificación de los datos guardados se hace en `ListaComponent`, que obtiene el arreglo actualizado con `productoService.listarProductos()` en `ngOnInit()` y lo renderiza en una tabla mediante `*ngFor`, permitiendo confirmar visualmente que los productos válidos fueron registrados correctamente.
 
+## 5. Pruebas y capturas:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/86153eb9-35e0-486f-a420-7003cd344954" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/4339f924-9608-4a13-8089-458ed49668c6" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/9c2d34f4-4b2c-4b9f-b796-cff468538c9d" />
 ![alt text](image.png)
