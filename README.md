@@ -56,4 +56,5 @@ La verificación de los datos guardados se hace en `ListaComponent`, que obtiene
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/86153eb9-35e0-486f-a420-7003cd344954" />
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/4339f924-9608-4a13-8089-458ed49668c6" />
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/9c2d34f4-4b2c-4b9f-b796-cff468538c9d" />
+<img width="1237" height="633" alt="image" src="https://github.com/user-attachments/assets/bd54de9e-765c-4283-a9b3-9954dd993394" />
 ![alt text](image.png)
